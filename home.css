@@ -1,0 +1,52 @@
+section {
+    max-width: 900px;
+    padding: 0 20px 40px 20px;
+    border-bottom: 1px solid #333;
+    margin: 0; /* Remove auto-centering */
+  }
+  
+  h2, p {
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin: 15px 0;
+  }
+  
+  
+
+  .emoji {
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+  .hero {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #4b0082;
+    margin-bottom: 40px;
+    font-family: 'Great Vibes', cursive;
+    padding-left: 20px;
+  }
+  
