@@ -1,0 +1,61 @@
+.exam-details {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .exam-details h2 {
+    font-size: 2rem;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .exam-details h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-left: 4px solid #1a73e8;
+    padding-left: 10px;
+  }
+  
+  .exam-details p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .exam-details ul {
+    padding-left: 20px;
+    margin: 10px 0 20px;
+  }
+  
+  .exam-details ul li {
+    list-style-type: "✅ ";
+    margin-bottom: 8px;
+  }
+  
+  .exam-details strong {
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    .exam-details {
+      padding: 20px;
+    }
+  
+    .exam-details h2 {
+      font-size: 1.5rem;
+    }
+  
+    .exam-details h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
