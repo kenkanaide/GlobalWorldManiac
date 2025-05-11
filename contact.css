@@ -7,7 +7,7 @@ body {
   }
   
   header {
-    background: #0b57d0;
+    background: #000000;
     padding: 10px 20px;
     color: white;
   }
@@ -58,6 +58,7 @@ body {
     max-width: 800px;
     margin: auto;
     text-align: center;
+    color: rgb(0, 0, 0);
   }
   
   .contact-card {

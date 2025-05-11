@@ -127,4 +127,6 @@
   .back-btn:hover {
     background-color: #222;
   }
-  
+  .icon {
+    transition: none;  /* Disable transitions */
+  }

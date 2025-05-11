@@ -5,14 +5,22 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: white;
+body {background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   font-family: Arial, sans-serif;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: black;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* optional visual polish */
+}
+
 
 /* Navigation */
 nav {
-  display: flex;
+  display: flex; 
+  
   justify-content: space-between;
   align-items: center;
   background-color: black;
@@ -182,5 +190,11 @@ nav ul .search::after {
     max-width: 1200px;
     margin: auto;
   }
+}header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}.icon {
+  transition: none;  /* Disable transitions */
 }
 

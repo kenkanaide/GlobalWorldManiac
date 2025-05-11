@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="registration.css">
+  <link rel="stylesheet" href="registration.js">
+  <title>Candidate Registration</title>
+</head>
+<body>
+
+      
+  <div class="container">
+    <h2 class="form-title">Candidate Registration</h2>
+    <form id="registration-form" onsubmit="return validateForm()">
+      <!-- Personal Information -->
+      <div class="form-group">
+        <label for="fullName">Full Name <span class="required">*</span></label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="^[0-9]+$" title="Only numbers are allowed.">
+      </div>
+
+      <!-- Address Details -->
+      <div class="form-group">
+        <label for="address">Address <span class="required">*</span></label>
+        <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="form-group">
+        <label for="payment-method">Payment Method <span class="required">*</span></label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="">Select a Payment Method</option>
+          <option value="upi">UPI (Subcontinent)</option>
+          <option value="paytm">Paytm (Subcontinent)</option>
+          <option value="bank-transfer">Bank Transfer (Subcontinent)</option>
+          <option value="credit-card">Credit Card (Global)</option>
+          <option value="paypal">PayPal (Global)</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Registration</button>
+      
+      <!-- Back Button -->
+      <button type="button" class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
