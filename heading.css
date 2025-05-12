@@ -99,7 +99,12 @@ footer p:hover {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+
+}.button-group {
+  display: flex;
+  gap: 5px; /* Adjust this for spacing */
 }
+
 
 .btn:hover {
   color: aqua;
