@@ -1,67 +1,33 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const app = express();
-const port = 3000;
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("registrationForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-// Updated MongoDB connection code without deprecated options
-mongoose.connect('mongodb://127.0.0.1:27017/registrationDB')
-  .then(() => console.log('✅ Connected to MongoDB'))
-  .catch(err => console.error('❌ MongoDB connection failed', err));
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phoneCode = document.getElementById("country-code").value;
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const school = document.getElementById("school").value.trim();
+    const paymentMethod = document.getElementById("payment-method").value;
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static('public')); // For serving static files
-
-// Schema & Model
-const registrationSchema = new mongoose.Schema({
-  fullName: String,
-  email: String,
-  phone: String,
-  address: String,
-  paymentMethod: String
-});
-const Registration = mongoose.model('Registration', registrationSchema);
-
-// POST route
-app.post('/register', async (req, res) => {
-  const { fullName, email, phone, address } = req.body;
-  const paymentMethod = req.body['payment-method'];
-
-  if (!fullName || !email || !phone || !address || !paymentMethod) {
-    return res.json({ success: false, message: 'All fields are required.' });
-  }
-
-  const namePattern = /^[A-Za-z\s]+$/;
-  const phonePattern = /^[0-9]+$/;
-
-  if (!namePattern.test(fullName)) {
-    return res.json({ success: false, message: 'Invalid name format.' });
-  }
-
-  if (!phonePattern.test(phone)) {
-    return res.json({ success: false, message: 'Invalid phone number.' });
-  }
-
-  try {
-    const newUser = new Registration({
-      fullName,
-      email,
-      phone,
-      address,
-      paymentMethod
+    const res = await fetch("/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fullName, email, phoneCode, phone, address, school, paymentMethod }),
     });
 
-    await newUser.save();
-    res.json({ success: true, message: 'Registration successful!' });
-  } catch (err) {
-    console.error(err);
-    res.json({ success: false, message: 'Server error' });
+    const data = await res.json();
+    alert(data.message);
+  });
+});
+function validateForm() {
+  // validation logic here
+  return true; // or false if invalid
+}
+fetch("http://localhost:3000/register", {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-Type": "application/json"
   }
-});
-
-// Start server
-app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
-});
+})

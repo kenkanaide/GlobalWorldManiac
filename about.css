@@ -113,3 +113,38 @@
     display: block;
     margin-top: 20px;
 }
+  /* ===== SYLLABUS SECTION ===== */
+.syllabus-section {
+    background: #0a0a0f;
+    padding: 80px 20px;
+    color: #00f9ff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    border-top: 2px solid #00f9ff;
+    box-shadow: 0 0 20px rgba(0, 249, 255, 0.2);
+    animation: glowFade 4s infinite alternate ease-in-out;
+    
+}
+
+.syllabus-section h2 {
+    font-size: 3rem;
+    text-shadow: 0 0 12px #00f9ff, 0 0 25px #008c9e;
+    letter-spacing: 2px;
+    
+}
+.syllabus-section a {
+    text-decoration: none;     /* removes underline */
+    color: inherit;            /* uses parent element color */
+}
+
+
+
+/* Glowing animation */
+@keyframes glowFade {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 249, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 249, 255, 0.6);
+    }
+}

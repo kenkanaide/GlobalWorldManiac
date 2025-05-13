@@ -62,7 +62,7 @@
     color: red;
   }
   
-  .submit-btn {
+  .reg-but {
     width: 100%;
     padding: 12px;
     background-color: #0b57d0;
@@ -99,4 +99,31 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  
+  /* Existing styles remain the same, but we will add styling for phone number container */
+.phone-container {
+  display: flex;
+  align-items: center;
+}
+
+.phone-container select,
+.phone-container input {
+  width: 48%;
+  margin-right: 4%;
+}
+
+.phone-container input {
+  flex-grow: 1;
+}
+
+.back-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
