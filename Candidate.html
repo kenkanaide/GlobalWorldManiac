@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>⚙️ Candidates </title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #01010c, #050d28);
+      color: #0ff;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #020e2b;
+      padding: 20px;
+      border-bottom: 2px solid #00f0ff;
+      box-shadow: 0 0 15px #00f0ff;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 0 0 15px #00f0ff;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 12px 24px;
+      background: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00f0ff;
+      cursor: pointer;
+    }
+    .candidate-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px 40px 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .card {
+      background: rgba(0, 255, 255, 0.07);
+      border: 2px solid #0ff;
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px #0ff;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px #0ff, 0 0 20px #0ff inset;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #021126;
+      border-top: 2px solid #0ff;
+      color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚙️ Candidates-info</h1>
+  </header>
+
+  
+
+  <main class="candidate-section">
+    <div class="card">
+      <h3>👤 Name: Aryan Raj</h3>
+      <p>Grade: 9</p>
+      <p>Status: Verified</p>
+    </div>
+    <div class="card">
+      <h3>👤 Name: Sneha Kapoor</h3>
+      <p>Grade: 10</p>
+      <p>Status: Pending</p>
+    </div>
+    <!-- More candidate cards can go here -->
+  </main>
+
+ <footer>
+        <p class="text-centre"> All Rights Are Reserved &copy;2025 GlobalWorldManiac</p>
+    </footer>
+  <div style="text-align: left;">
+    <button class="back-btn" onclick="history.back()">🔙 Back</button>
+  </div>
+</body>
+</html>
+
